@@ -1,0 +1,3 @@
+# Linguist Detectable
+*.html linguist-detectable=false
+routes.ts linguist-detectable=false

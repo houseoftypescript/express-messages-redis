@@ -1,0 +1,86 @@
+{
+  "components": {
+    "examples": {},
+    "headers": {},
+    "parameters": {},
+    "requestBodies": {},
+    "responses": {},
+    "schemas": {},
+    "securitySchemes": {}
+  },
+  "info": {
+    "title": "@redis/producer",
+    "version": "0.0.1",
+    "description": "Redis Producer",
+    "license": {
+      "name": "MIT"
+    },
+    "contact": {
+      "name": "hieudoanm ",
+      "email": "hieumdoan@gmail.com"
+    }
+  },
+  "openapi": "3.0.0",
+  "paths": {
+    "/health": {
+      "get": {
+        "operationId": "Get",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  },
+                  "required": ["status"],
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "tags": ["Health"],
+        "security": [],
+        "parameters": []
+      }
+    },
+    "/messages/produce": {
+      "post": {
+        "operationId": "Produce",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        },
+        "tags": ["Messages"],
+        "security": [],
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  }
+                },
+                "required": ["message"],
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ]
+}
