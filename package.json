@@ -7,11 +7,6 @@
   "author": "hieudoanm <hieumdoan@gmail.com>",
   "license": "GNU GPL 3.0",
   "private": true,
-  "engines": {
-    "node": "20.3.1",
-    "npm": "9.7.2",
-    "yarn": "1.22.19"
-  },
   "scripts": {
     "build:producer": "yarn workspace @redis/producer build",
     "dev:producer": "yarn workspace @redis/producer dev",
